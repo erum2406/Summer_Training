@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Director Login{% endblock title %}
+
+{% block body %}
+	<h2>Director Login</h2>
+	<form action="dlogin" method="post">
+	{% csrf_token %}
+		Username: <input type="text" name="duser" placeholder="Enter username"><br><br>
+		Password: <input type="password" name="dpass" placeholder="Enter Password"><br><br>
+		<input type="submit" value="Login">
+	</form>
+	{{error}}
+{% endblock body %}

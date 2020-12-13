@@ -1,0 +1,20 @@
+Entry and Exit System
+	Director:
+		Login:
+			Create Gaurd Account:
+				Uername
+				First Name
+				Last Name
+				Password
+			Clock Entry and Exit
+			Logout
+	Gaurd:
+		Login:
+			Inser Entry:
+				Guest Name
+				Purpose
+				Phone
+				Address
+			Update Exit Time
+			Check Entry and Exit
+			Logout
