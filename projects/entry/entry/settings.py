@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'gaurd.apps.GaurdConfig',
     'director.apps.DirectorConfig',
     'django.contrib.admin',
     'django.contrib.auth',

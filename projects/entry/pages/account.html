@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Create Account{% endblock title %}
+{% block body %}
+	<h2>Create Account</h2>
+	<form action="create_account" method="post">
+	{% csrf_token %}
+		Username: <input type="text" name="guser" placeholder="Enter username"><br><br>
+		First Name: <input type="text" name="gfname" placeholder="Enter First Name"><br><br>
+		Last Name: <input type="text" name="glname" placeholder="Enter Last Name"><br><br>
+		Password: <input type="password" name="gpass" placeholder="Enter Password"><br><br>
+		<input type="submit" value="Create Account">
+	</form>
+	{{msg}}
+{% endblock body %}

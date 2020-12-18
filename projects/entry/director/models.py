@@ -4,5 +4,6 @@ from django.db import models
 class director_login(models.Model):
     duser=models.CharField(max_length=100)
     dpass=models.CharField(max_length=100)
-    def __str__ (self):
+    
+    def __str__(self):
         return self.duser
