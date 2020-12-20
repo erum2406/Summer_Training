@@ -8,3 +8,12 @@ class gaurds(models.Model):
     gpass=models.CharField(max_length=100)
     def __str__(self):
         return self.gfname
+        
+class guest_entries(models.Model):
+    guest_name=models.CharField(max_length=100)
+    purpose=models.CharField(max_length=100)
+    address=models.CharField(max_length=100)
+    intime=models.CharField(max_length=100)
+    extime=models.CharField(max_length=100)
+    def __str__(self):
+        return self.guest_name

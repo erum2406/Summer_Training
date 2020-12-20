@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Insert Entry{% endblock title %}
+{% block body %}
+	<h2>Insert Enter</h2>
+	<a href="ghome">Home</a> | <a href="glogout">Logout</a><br><br>
+	<form action="insert_entry" method="post">
+	{% csrf_token %}
+		Name: <input type="text" name="guest_name" placeholder="Name"><br><br>
+		Purpose: <input type="text" name="purpose" placeholder="Purpose"><br><br>
+		Address: <input type="text" name="address" placeholder="Address"><br><br>
+		<input type="submit" value="Insert Entry">
+	</form>
+	{{msg}}
+{% endblock body %}

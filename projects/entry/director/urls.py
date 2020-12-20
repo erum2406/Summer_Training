@@ -10,4 +10,5 @@ urlpatterns = [
     path('logout', views.logout, name="logout"),
     path('account', views.account, name="accont"),
     path('create_account', views.create_account, name="create_account"),
+    path('checked', views.checked, name="checked"),
 ]

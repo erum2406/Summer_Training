@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Check Entries{% endblock title %}
+
+{% block body %}
+	<a href="ghome">Home</a> | <a href="glogout">Logout</a><br><br>
+	<span style="color:green">{{msg}}</span>
+	<h2>Entries</h2>
+
+	<table border="1" width="100%">
+		<tr>
+			<th>Sr. No.</th>
+			<th>Guest Name</th>
+			<th>Purpose</th>
+			<th>Address</th>
+			<th>Entry Time</th>
+			<th>Exit Time</th>
+		</tr>
+		{% for i in res %}
+		<tr>
+			<td>{{i.id}}</td>
+			<td>{{i.guest_name}}</td>
+			<td>{{i.purpose}}</td>
+			<td>{{i.address}}</td>
+			<td>{{i.intime}}</td>
+			<td>{{i.extime}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock body %}

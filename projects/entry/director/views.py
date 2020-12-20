@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from . models import director_login
 from gaurd.models import gaurds
+from gaurd.models import guest_entries
 
 # Create your views here.
 def director(request):
@@ -49,3 +50,7 @@ def create_account(request):
         a=gaurds(guser=guser, gfname=gfname, glname=glname, gpass=gpass)
         a.save()
         return render(request,'account.html',{'msg':'Account created successfully'})
+        
+def checked(request):
+    res=guest_entries.objects.all()
+    return render(request,'checked.html',{'res':res})
